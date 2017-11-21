@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Beki } from '../gestion-beki/beki.model';
-import { BekiService } from '../gestion-beki/beki.service';
+import { User } from '../gestion-beki/user.model';
+import { UserService } from '../gestion-beki/user.service';
 
 @Component({
   selector: 'app-header',
@@ -10,11 +10,11 @@ import { BekiService } from '../gestion-beki/beki.service';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit {
-  beki: Beki;
-  constructor(private bekisService: BekiService) { }
+  user: User;
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-  	this.beki = this.bekisService.getBeki(2);
+  	this.user = this.userService.getUser(2);
   }
 
 }

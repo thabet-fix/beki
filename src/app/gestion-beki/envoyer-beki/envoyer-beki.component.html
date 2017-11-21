@@ -2,20 +2,20 @@
 	<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 ">
 		<form (ngSubmit)="onSubmit()" #f="ngForm">
 			<div class="bloc-espacement">
-				<input 
-				type="text" 
-				name="montant" 
-				placeholder="Montant à envoyer" 
+				<input
+				type="text"
+				name="montant"
+				placeholder="Montant à envoyer"
 				class="form-control"
 				ngModel
-            	required
+        required
 				>
 			</div>
 			<div class="bloc-espacement">
 				<input type="submit" name="" class="btn btn-primary btn-primary btn-full" value="Envoyer">
-			</div>	
-		</form>	
+			</div>
+		</form>
 
-		<button class="btn btn-primary" (click)="onSave()">Enregistrer</button>	
+		<button class="btn btn-primary" (click)="onSave()">Enregistrer</button>
 	</div>
 </div>

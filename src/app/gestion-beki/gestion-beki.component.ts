@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
-import { Beki } from './beki.model';
-import { BekiService } from './beki.service';
+import { User } from './user.model';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-gestion-beki',
@@ -10,11 +10,11 @@ import { BekiService } from './beki.service';
   encapsulation: ViewEncapsulation.None
 })
 export class GestionBekiComponent implements OnInit {
-  beki: Beki;
-  constructor(private bekisService: BekiService) { }
+  user: User;
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
-  	this.beki = this.bekisService.getBeki(2);
+  	this.user = this.userService.getUser(2);
   }
 
 }

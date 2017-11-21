@@ -1,19 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from "@angular/http";
 
+import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { GestionBekiComponent } from './gestion-beki/gestion-beki.component';
 
-import { AppRoutingModule }     from './app-routing.module';
+
 import { RecevoirBekiComponent } from './gestion-beki/recevoir-beki/recevoir-beki.component';
 import { EnvoyerBekiComponent } from './gestion-beki/envoyer-beki/envoyer-beki.component';
 
-import { BekiService } from './gestion-beki/beki.service';
+import { UserService } from './gestion-beki/user.service';
 import { DataExchangeService } from './shared/data-exchange.service';
-import {HttpModule} from "@angular/http";
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import {HttpModule} from "@angular/http";
     FormsModule,
     HttpModule,
   ],
-  providers: [BekiService, DataExchangeService],
+  providers: [UserService, DataExchangeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
