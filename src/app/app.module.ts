@@ -12,7 +12,8 @@ import { RecevoirBekiComponent } from './gestion-beki/recevoir-beki/recevoir-bek
 import { EnvoyerBekiComponent } from './gestion-beki/envoyer-beki/envoyer-beki.component';
 
 import { BekiService } from './gestion-beki/beki.service';
-import { DataExchange } from './shared/data-exchange.service';
+import { DataExchangeService } from './shared/data-exchange.service';
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { DataExchange } from './shared/data-exchange.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpModule,
   ],
-  providers: [BekiService, DataExchange],
+  providers: [BekiService, DataExchangeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

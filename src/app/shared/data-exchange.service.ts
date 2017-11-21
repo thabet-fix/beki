@@ -9,7 +9,7 @@ import { Beki } from '../gestion-beki/beki.model';
 export class DataExchangeService {
 	constructor(private http: Http, private bekiService: BekiService){}
 	storeBekies() {
-    	return this.http.put('https://beki-20edd.firebaseio.com/beki.jso', this.bekiService.getBekies());
+    	return this.http.put('https://beki-20edd.firebaseio.com/beki.json', this.bekiService.getBekis());
   	}
 
 }
