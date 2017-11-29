@@ -20,6 +20,10 @@
       <li><a href="#">Imprimer QR</a></li>
       <li><a href="#">Devenir commerçant</a></li>
     </ul>
-    <div class="pull-right montant">{{ user.beki}} DT</div>
+    <!--<div *ngFor="let user of userList">-->
+      <div class="pull-right montant">{{ user.beki}} DT</div>
+      <div class="pull-right user">{{ user.firstName }} {{ user.name }}</div>
+    <!--</div>-->
+
   </div><!-- /.navbar-collapse -->
 </nav>

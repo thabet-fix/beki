@@ -14,7 +14,7 @@ export class GestionBekiComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
-  	this.user = this.userService.getUser(2);
+  	//this.user = this.userService.getUser(2);
   }
 
 }
